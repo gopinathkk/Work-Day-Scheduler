@@ -1,12 +1,15 @@
 var now = moment();
+var timeNow = document.querySelector("#timenow");
 var date = document.querySelector("#date");
 var day = document.querySelector("#day");
 var event1 = document.querySelector("#event1");
 var hour = moment().format("HH");
-var events = ["", "", "", "", "", "", "", "", "", "","",""];
+var events = ["", "", "", "", "", "", "", "", "", "", "", ""];
 date.innerHTML = moment().format("Do MMMM YYYY");
-day.innerHTML=moment().format("dddd")
+day.innerHTML = moment().format("dddd");
 var btn0 = document.querySelector("#button0");
+
+
 btn0.addEventListener("click", function () {
   eventStore();
 });
@@ -62,8 +65,8 @@ function eventStore() {
   events[7] = $("#event7").val();
   events[8] = $("#event8").val();
   events[9] = $("#event9").val();
-  events[10]=$("#event10").val();
-  events[11]=moment().format("DDMMYYYY")
+  events[10] = $("#event10").val();
+  events[11] = moment().format("DDMMYYYY");
   localStorage.setItem("dailyEvents", JSON.stringify(events));
 }
 
@@ -214,38 +217,47 @@ function labelColor() {
   }
 }
 
-function eventRetriev(){
-  events=JSON.parse(localStorage.getItem("dailyEvents"));
-  if(events[11]==moment().format("DDMMYYYY")){
-  $("#event0").val(events[0])
-  $("#event1").val(events[1])
-  $("#event2").val(events[2])
-  $("#event3").val(events[3])
-  $("#event4").val(events[4])
-  $("#event5").val(events[5])
-  $("#event6").val(events[6])
-  $("#event7").val(events[7])
-  $("#event8").val(events[8])
-  $("#event9").val(events[9])
-  $("#event10").val(events[10])
-}
-else{
-  events=["", "", "", "", "", "", "", "", "", "","",""]
-  localStorage.setItem("dailyEvents", JSON.stringify(events));
-  $("#event0").val(events[0])
-  $("#event1").val(events[1])
-  $("#event2").val(events[2])
-  $("#event3").val(events[3])
-  $("#event4").val(events[4])
-  $("#event5").val(events[5])
-  $("#event6").val(events[6])
-  $("#event7").val(events[7])
-  $("#event8").val(events[8])
-  $("#event9").val(events[9])
-  $("#event10").val(events[10])
+function eventRetriev() {
+  events = JSON.parse(localStorage.getItem("dailyEvents"));
+  if (events[11] == moment().format("DDMMYYYY")) {
+    $("#event0").val(events[0]);
+    $("#event1").val(events[1]);
+    $("#event2").val(events[2]);
+    $("#event3").val(events[3]);
+    $("#event4").val(events[4]);
+    $("#event5").val(events[5]);
+    $("#event6").val(events[6]);
+    $("#event7").val(events[7]);
+    $("#event8").val(events[8]);
+    $("#event9").val(events[9]);
+    $("#event10").val(events[10]);
+  } else {
+    events = ["", "", "", "", "", "", "", "", "", "", "", ""];
+    localStorage.setItem("dailyEvents", JSON.stringify(events));
+    $("#event0").val(events[0]);
+    $("#event1").val(events[1]);
+    $("#event2").val(events[2]);
+    $("#event3").val(events[3]);
+    $("#event4").val(events[4]);
+    $("#event5").val(events[5]);
+    $("#event6").val(events[6]);
+    $("#event7").val(events[7]);
+    $("#event8").val(events[8]);
+    $("#event9").val(events[9]);
+    $("#event10").val(events[10]);
+  }
 }
 
+function resetDayEnd() {
+  if (moment().format("hmmss") == "000000") {
+    var now = moment();
+    var hour = moment().format("HH");
+    date.innerHTML = moment().format("Do MMMM YYYY");
+    day.innerHTML = moment().format("dddd");
+    eventRetriev();
+  }
 }
 
 labelColor();
 eventRetriev();
+resetDayEnd();
