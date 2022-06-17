@@ -27,6 +27,22 @@ textarea{
 .sectionstyle{
   margin-bottom: -15px;
 }
+.btnstyle{
+  width:100px; 
+  height:70px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.cardwidth{
+  width: 150px;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  
+  
+
+  
+}
 
 .jumbotron {
   text-align: center;
