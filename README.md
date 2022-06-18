@@ -19,7 +19,7 @@ Git Hub
 * [Full Demo Video] (coming)
 
 The following animation demonstrates the application functionality:
-![](Assets/Animation.gif)
+![](./Assets/Images/Animation.gif)
 
 ### Prerequisites
 
@@ -33,7 +33,7 @@ To install this code, download the zip file, or use GitHub's guidelines to clone
 this Simple day planner application is created using HTML , CSS and JavaScript supported by Bootstrap and Moment.js 
 * This project emphasizes the use of Bootstrap and Moment.js along with jQuery to make dynamic changes to an HMTL document
 
-![](Assets/images/frontpage.png)1`  
+![](./Assets/Images/MainPage.png)  
 
 ### This project has the following features: 
 
@@ -43,32 +43,33 @@ this Simple day planner application is created using HTML , CSS and JavaScript s
 * Each time block is color-coded to indicate whether it is in the past, present, or future
 * User can click into the time block and enter an event
 * A save button for each time block to store that event entry
+![](./Assets/Images/Editevents.png) 
 * Text for that event is saved in local storage
 * All schedules will be reset at the end of the day
 
 ### Psuedo Code and Project Requirements: 
 
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with time blocks for standard business hours
-WHEN I view the time blocks for that day
-THEN each time block is color-coded to indicate whether it is in the past, present, or future
-WHEN I click into a time block
-THEN I can enter an event
-WHEN I click the save button for that time block
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-End of the day the events will be cleared from scheduler and memory.
+AS an employee with a busy schedule
+* I WANT to add important events to a daily planner
+* SO THAT I can manage my time effectively
+* GIVEN I am using a daily planner to create a schedule
+* WHEN I open the planner
+* THEN the current day is displayed at the top of the calendar
+* WHEN I scroll down
+* THEN I am presented with time blocks for standard business hours
+* WHEN I view the time blocks for that day
+* THEN each time block is color-coded to indicate whether it is in the past, present, or future
+* WHEN I click into a time block
+* THEN I can enter an event
+* WHEN I click the save button for that time block
+* THEN the text for that event is saved in local storage
+* WHEN I refresh the page
+* THEN the saved events persist
+* End of the day the events will be cleared from scheduler and memory.
 
 ### This project has script features of:
 
- *Use Moment.js to get the date and time
+ * Use Moment.js to get the date and time
  * Use Bootstrap text input fields and buttons
  * Functions to read text entries and store them on local storage with a date stamp.
  * Retrieve the stored data from local storage and display it 
@@ -92,21 +93,21 @@ End of the day the events will be cleared from scheduler and memory.
         
 * One JavaScript Page
     *script.js
-        Contains: 
-        * Variables, including arrays 
-        * Event listeners
-        * if/else if statements
-        * Moment.js
-        * Function to check current date and time
-        * Function to read and store user entries at the text field
-        * Function to buttons
-        * Function to save and retrieve to and from local storage
-        * Function to delete the user entries at end of day
-        * An array to store the events and the date
+    * Contains: 
+        - Variables, including arrays 
+        - Event listeners
+        - if/else if statements
+        - Moment.js
+        - Function to check current date and time
+        - Function to read and store user entries at the text field
+        - Function to buttons
+        - Function to save and retrieve to and from local storage
+        - Function to delete the user entries at end of day
+        - An array to store the events and the date
 
-        * The following future improvements are considered:
-         - store each day’s events with a date stamp and it can be retrieved at a later dates.
-         - ability to select a future date and schedule events for the day.
+* The following future improvements are considered:
+    - store each day’s events with a date stamp and it can be retrieved at a later dates.
+    - ability to select a future date and schedule events for the day.
 
           
 ## Authors
