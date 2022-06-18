@@ -3,14 +3,17 @@ var now = moment();
 var timeNow = document.querySelector("#timenow");
 var date = document.querySelector("#date");
 var day = document.querySelector("#day");
+var time = document.querySelector("#time");
 var event1 = document.querySelector("#event1");
 var hour = moment().format("HH");
 var events = ["", "", "", "", "", "", "", "", "", "", "", ""];
-//update date and day
+
+//initialise date and day display
 date.innerHTML = moment().format("Do MMMM YYYY");
 day.innerHTML = moment().format("dddd");
 
-//function of lock buttons -: save text field entries to local storage with a date stamp using function eventStore
+//================================================================================================================
+//function of save buttons -: save text field entries to local storage with a date stamp using function eventStore
 var btn0 = document.querySelector("#button0");
 btn0.addEventListener("click", function () {
   eventStore();
@@ -56,7 +59,9 @@ btn10.addEventListener("click", function () {
   eventStore();
 });
 
+//==================================================================================================================
 //function for saving text field entries to local storage with a date stamp
+
 function eventStore() {
   events[0] = $("#event0").val();
   events[1] = $("#event1").val();
@@ -72,9 +77,12 @@ function eventStore() {
   events[11] = moment().format("DDMMYYYY");
   localStorage.setItem("dailyEvents", JSON.stringify(events));
 }
+
+//==================================================================================================================
 //function for changing label color based on current time: three colors for past , present and upcoming events
+
 function labelColor() {
-  var hourNumber = hour - 8;
+  var hourNumber = hour - 11;
   if (hourNumber == 0) {
     $("#event0").removeClass("list-group-item-success");
     $("#event0").removeClass("list-group-item-dark");
@@ -219,11 +227,12 @@ function labelColor() {
     $("#event10").addClass("list-group-item-dark");
   }
 }
+
+//===================================================================================================================
 //function to retrive saved data from local storage and display it in the event test fields.
-//this function will be called everytime the application opens
-//this function also will be called at the beginning every hour when the application is running
-//this function will reset the local storage empty when the date changes.
-//When the applcation open another day a fresh page with no events will be displayed. If the apllication is running, event entries will be cleared at the end of day.
+//this function will be called everytime the application opens.
+//when the date changes, this function will delete the stored events from the local memory.
+
 function eventRetriev() {
   events = JSON.parse(localStorage.getItem("dailyEvents"));
   if (events[11] == moment().format("DDMMYYYY")) {
@@ -238,7 +247,6 @@ function eventRetriev() {
     $("#event8").val(events[8]);
     $("#event9").val(events[9]);
     $("#event10").val(events[10]);
-    labelColor();
   } else {
     events = ["", "", "", "", "", "", "", "", "", "", "", ""];
     localStorage.setItem("dailyEvents", JSON.stringify(events));
@@ -255,16 +263,22 @@ function eventRetriev() {
     $("#event10").val(events[10]);
     date.innerHTML = moment().format("Do MMMM YYYY");
     day.innerHTML = moment().format("dddd");
-    labelColor();
   }
 }
+
+//==================================================================================================================
+// a function to auto refresh the page every hour, and also to run a clock in the HTML heading
+
 function autoUpdate() {
-  if (moment().format("mm") == 0 && moment().format("ss") < 3) {
-    eventRetriev();
+  time.innerHTML = moment().format("hh:mm:ss");
+  if (moment().format("m") == 0 && moment().format("s") < 2) {
+    location.reload();
   }
 }
+
+//=================================================================================================================
+//function calls
 
 setInterval(autoUpdate, 1000);
-
 labelColor();
 eventRetriev();

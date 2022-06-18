@@ -96,7 +96,7 @@ AS an employee with a busy schedule
     * Contains: 
         - Variables, including arrays 
         - Event listeners
-        - if/else if statements
+        - if/else statements
         - Moment.js
         - Function to check current date and time
         - Function to read and store user entries at the text field

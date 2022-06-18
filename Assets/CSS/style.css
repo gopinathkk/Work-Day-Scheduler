@@ -2,12 +2,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-  
-   
-  
 }
 
-textarea{
+textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -15,34 +12,40 @@ textarea{
   border-left: 1px solid black;
   padding: 10px;
 }
-.container{
+
+/* added below classes ==============================*/
+
+.container {
   display: block;
   flex-direction: column;
   justify-content: center;
 }
-.datedisplay{
-   text-align: center;
-   margin-bottom: 40px;
+
+.datedisplay {
+  text-align: center;
+  margin-bottom: 40px;
 }
-.sectionstyle{
+
+.sectionstyle {
   margin-bottom: -15px;
 }
-.btnstyle{
-  width:100px; 
-  height:70px;
+
+.btnstyle {
+  width: 100px;
+  height: 70px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.cardwidth{
+
+.cardwidth {
   width: 150px;
   flex-direction: row;
   text-align: center;
   align-items: center;
-  
-  
-
-  
 }
+
+/* =================================================== */
+
 
 .jumbotron {
   text-align: center;
@@ -52,11 +55,11 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
+.description {
   white-space: pre-wrap;
 }
 
-.time-block{
+.time-block {
   text-align: center;
   border-radius: 15px;
 }
@@ -64,7 +67,8 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
+  ;
 }
 
 .hour {
