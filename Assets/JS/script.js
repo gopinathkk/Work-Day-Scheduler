@@ -1,3 +1,5 @@
+// Please do not test this on Edge, moment.js is not functioning as expected in Edge
+
 //initialise variables
 var now = moment();
 var timeNow = document.querySelector("#timenow");
@@ -6,58 +8,15 @@ var day = document.querySelector("#day");
 var time = document.querySelector("#time");
 var event1 = document.querySelector("#event1");
 var hour = moment().format("HH");
-var events = ["", "", "", "", "", "", "", "", "", "", "", ""];
-
+var events = ["", "", "", "", "", "", "", "", "", "", "", "0"];
 //initialise date and day display
 date.innerHTML = moment().format("Do MMMM YYYY");
 day.innerHTML = moment().format("dddd");
 
 //================================================================================================================
-//function of save buttons -: save text field entries to local storage with a date stamp using function eventStore
-var btn0 = document.querySelector("#button0");
-btn0.addEventListener("click", function () {
-  eventStore();
-});
-var btn1 = document.querySelector("#button1");
-btn1.addEventListener("click", function () {
-  eventStore();
-});
-var btn2 = document.querySelector("#button2");
-btn2.addEventListener("click", function () {
-  eventStore();
-});
-var btn3 = document.querySelector("#button3");
-btn3.addEventListener("click", function () {
-  eventStore();
-});
-var btn4 = document.querySelector("#button4");
-btn4.addEventListener("click", function () {
-  eventStore();
-});
-var btn5 = document.querySelector("#button5");
-btn5.addEventListener("click", function () {
-  eventStore();
-});
-var btn6 = document.querySelector("#button6");
-btn6.addEventListener("click", function () {
-  eventStore();
-});
-var btn7 = document.querySelector("#button7");
-btn7.addEventListener("click", function () {
-  eventStore();
-});
-var btn8 = document.querySelector("#button8");
-btn8.addEventListener("click", function () {
-  eventStore();
-});
-var btn9 = document.querySelector("#button9");
-btn9.addEventListener("click", function () {
-  eventStore();
-});
-var btn10 = document.querySelector("#button10");
-btn10.addEventListener("click", function () {
-  eventStore();
-});
+//function of lock buttons -: save text field entries to local storage with a date stamp using the function "eventStore"
+
+$("button[name='lock']").click(function() {eventStore()});
 
 //==================================================================================================================
 //function for saving text field entries to local storage with a date stamp
@@ -82,7 +41,7 @@ function eventStore() {
 //function for changing label color based on current time: three colors for past , present and upcoming events
 
 function labelColor() {
-  var hourNumber = hour - 11;
+  var hourNumber = hour - 8;
   if (hourNumber == 0) {
     $("#event0").removeClass("list-group-item-success");
     $("#event0").removeClass("list-group-item-dark");
@@ -248,7 +207,7 @@ function eventRetriev() {
     $("#event9").val(events[9]);
     $("#event10").val(events[10]);
   } else {
-    events = ["", "", "", "", "", "", "", "", "", "", "", ""];
+    events = ["", "", "", "", "", "", "", "", "", "", "", "0"];
     localStorage.setItem("dailyEvents", JSON.stringify(events));
     $("#event0").val(events[0]);
     $("#event1").val(events[1]);

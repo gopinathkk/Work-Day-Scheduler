@@ -6,7 +6,7 @@ Work Day Scheduler is an application which was assigned as the homework for week
 
 This code uses the Moment.js library to work with date and time and also Bootstrap for styling.
 
-This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript and Bootstrap. It has a clean and polished, responsive user interface that adapts to multiple screen sizes.
+This app will run in Chrome and IE11, and  will feature dynamically updated HTML and CSS powered by JavaScript and Bootstrap. It has a clean and polished, responsive user interface that adapts to multiple screen sizes. // Please do not test this on Edge, moment.js is not functioning as expected in Edge
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ Git Hub
 
 * [GitHub Repository] (https://github.com/gopinathkk/Work-Day-Scheduler.git )
 * [Deployed GitHub] ( https://gopinathkk.github.io/Work-Day-Scheduler/)
-* [Full Demo Video] (coming)
+* [Full Demo Video] (https://drive.google.com/file/d/1-vX91TP_nm80AR_esDxoYek9GGE2gMJU/view)
 
 The following animation demonstrates the application functionality:
 ![](./Assets/Images/Animation.gif)
