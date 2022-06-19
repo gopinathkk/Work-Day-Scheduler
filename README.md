@@ -14,7 +14,7 @@ This project has been deployed to GitHub Pages. To get this project up and runni
 
 Git Hub
 
-* [GitHub Repository] (https://github.com/gopinathkk/Work-Day-Scheduler.git )
+* [GitHub Repository] (https://github.com/gopinathkk/Work-Day-Scheduler.git)
 * [Deployed GitHub] ( https://gopinathkk.github.io/Work-Day-Scheduler/)
 * [Full Demo Video] (https://drive.google.com/file/d/1-vX91TP_nm80AR_esDxoYek9GGE2gMJU/view)
 
