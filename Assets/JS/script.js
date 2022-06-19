@@ -1,6 +1,4 @@
-// Please do not test this on Edge, moment.js is not functioning as expected in Edge
-
-//initialise variables
+ //initialise variables
 var now = moment();
 var timeNow = document.querySelector("#timenow");
 var date = document.querySelector("#date");
@@ -193,6 +191,7 @@ function labelColor() {
 //when the date changes, this function will delete the stored events from the local memory.
 
 function eventRetriev() {
+  if(localStorage.getItem("dailyEvents")==null){localStorage.setItem("dailyEvents", JSON.stringify(events));}
   events = JSON.parse(localStorage.getItem("dailyEvents"));
   if (events[11] == moment().format("DDMMYYYY")) {
     $("#event0").val(events[0]);

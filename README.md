@@ -6,7 +6,7 @@ Work Day Scheduler is an application which was assigned as the homework for week
 
 This code uses the Moment.js library to work with date and time and also Bootstrap for styling.
 
-This app will run in Chrome and IE11, and  will feature dynamically updated HTML and CSS powered by JavaScript and Bootstrap. It has a clean and polished, responsive user interface that adapts to multiple screen sizes. // Please do not test this on Edge, moment.js is not functioning as expected in Edge
+This app will run in browsers, and  will feature dynamically updated HTML and CSS powered by JavaScript and Bootstrap. It has a clean and polished, responsive user interface that adapts to multiple screen sizes. 
 
 ## Getting Started
 
